@@ -62,5 +62,4 @@ user_entry.grid(row=1, column=1, pady=10)
 password_entry.grid(row=2, column=1, pady=10)
 login_button.grid(row=3, column=0, columnspan=2, sticky="nsew", pady=10)
 
-
 root.mainloop()
