@@ -4,7 +4,7 @@ root = ctk.CTk()
 root.geometry("750x450")
 root.title("To do app")
 
-def add_todo():
+def add_todo(event = None):
     todo = entry.get()
     label = ctk.CTkLabel(scrollable_frame, text=todo)
     label.pack()
@@ -23,8 +23,11 @@ scrollable_frame.pack()
 entry = ctk.CTkEntry(scrollable_frame, placeholder_text="Add todo")
 entry.pack(fill="x")
 
+
 button = ctk.CTkButton(root, text="Add", width=500, command=add_todo)
 button.pack(pady=20)
+
+entry.bind("<Return>", add_todo)
 
 
 root.mainloop()
